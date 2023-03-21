@@ -1,0 +1,633 @@
+/* -----------------------------------------------------
+
+----------------------------------------------------- */
+
+
+/* START MAIN SETUP */
+
+/* -----------------------------------------------------
+               Main colors using variables 
+
+ It's useful if we use the same color in different places
+ and it can be helpful in case changing this color from all page
+                    note: variable name 
+----------------------------------------------------- */
+:root {
+    --pinkyColor: #e23c7c;
+    --fontColor: #FFF;
+    --gray-color: #1b1b1b;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 3px;
+    background-color: #ddd;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--pinkyColor);
+    border-radius: 5px;
+}
+
+/*-----------------------------------------------------
+Light & Dark mood
+-----------------------------------------------------*/
+@media(prefers-color-scheme: light) {
+    body {
+        background-color: #fff;
+    }
+}
+
+@media(prefers-color-scheme: dark) {
+    body {
+        background-color: #000;
+    }
+}
+
+@media(orientation: landscape) {
+    .container {
+        flex-direction: row;
+    }
+}
+
+@media(orientation: portrait) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* -----------------------------------------------------
+        ADD NEW FONT FROM FOLDER
+----------------------------------------------------- */
+@font-face {
+    font-family: "squidgame";
+    src: url('../fonts/squidgame.ttf');
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0; 
+}
+
+body {
+    font-family: 'Urbanist', sans-serif;
+    background-color: var(--gray-color);
+    color:var(--fontColor)
+}
+
+a {
+    text-decoration: none;
+    color:var(--fontColor)
+}
+
+ul li a, .text-logo p, h1, h2, h3 {
+    text-transform: capitalize;
+}
+
+/* -----------------------------------------------------
+        Style for every h2 for every section
+----------------------------------------------------- */
+
+h2 {
+    font-family: "squidgame", sans-serif;
+    text-align: center;
+    margin: 0px auto 1%;
+    letter-spacing: 4px;
+    font-size: 2rem;
+}
+
+#about p {
+    line-height: 1.7;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 576px) {
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    #about p {
+        margin: 5%;
+    }
+}
+
+section {
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+/* -----------------------------------------------------
+To Make selection invisible and change mouse pointer
+----------------------------------------------------- */
+::selection {
+    background-color: transparent;
+}
+
+ul {
+    list-style-type: none;
+    justify-content:flex-start;
+    padding-left: 0;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/*
+    @media (max-width: 767px) {}  // smartphones
+    @media (min-width: 768px) and (max-width: 1023px) {} //Tablets
+    @media (min-width: 1024px) {} //Desktops
+ */
+
+
+
+/* bootstrap breakpoints below 
+They use media queries to target landscape phones (576px), tablets (768px), laptops (992px) and extra large desktop screens (1200px).
+
+*/
+@media (min-width: 576px) {
+    .container {
+        width: 720px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        width: 1320px;
+    }
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #e2e2e2dc;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #e2e2e2dc;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #e2e2e2dc;
+}
+
+/* ----------------------------------------------------- 
+                    END MAIN SETUP 
+ ----------------------------------------------------- */
+nav, .links, ul, .logo, .main, .main div, .search, .burger-icon, #games .container {
+    display: flex;
+}
+
+
+header {
+    height: 100vh;
+    background: linear-gradient(139deg, #01204273, #600025), url(../imgs/header/bkground.jpg);
+    background-size: cover;
+}
+
+
+header .container {
+    height: 100%;
+}
+
+nav {
+    padding: 10px;
+    align-items: center;
+    height: 10vh;
+    color: #FFF;
+    justify-content: space-evenly;
+}
+
+nav div {
+    width: calc(70% / 3);
+}
+
+.logo img {
+    width: 80px;
+}
+
+
+/* ----------------------------------------------------- 
+               FOR LAPTOPs AND PCs
+----------------------------------------------------- */
+
+.burger-icon, .search input {
+    display: none;
+}
+
+ul {
+    flex-direction: row;
+}
+
+.links {
+    justify-content: center;
+    flex-basis: 400px;
+}
+
+nav ul {
+    justify-content: space-between;
+}
+
+ul li {
+margin-left: .5rem;
+margin-right: .5rem;
+}
+
+ul li a {
+    transition-duration: .5s;
+}
+/* -----------------------------------------------------
+using variable color by
+var(--namecolor, fullback value) >
+in case of absence of variable color css will excute the fallback color
+----------------------------------------------------- */
+
+ul li a:hover {
+    color: var(--pinkyColor);
+}
+
+.search {
+    justify-content: flex-end;
+}
+.search a {
+    background-color: #e00171;
+    padding: 7px 25px;
+    border-radius: 40px;
+}
+
+/* ----------------------------------------------------- 
+         FOR EVERY SCREEN EXCEPT LAPTOPs AND PCs
+----------------------------------------------------- */
+
+/* @media (max-width: 992px) {
+
+     .search input {
+        border-radius: 15px;
+        width: 100%;
+        height: 27px;
+        border: none;
+        color: #e2e2e2dc;
+        text-align: center;
+        font-family: 'Urbanist';
+        background-color: #6d304c2d;
+    } 
+    
+     .burger-icon {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 20px;
+        transition: 1s;
+    } 
+
+     .burger-icon span {
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        border-radius: 3px;
+        transition: .2s;
+    } 
+
+    .burger-icon span:last-of-type {
+        width: 20px;
+    }
+    
+    .burger-icon:hover span:last-of-type {
+        width: 30px;
+    }
+    
+    .burger-icon:hover .links ul li {
+        display: block;
+    } 
+
+}
+*/
+/* ----------------------------------------------------- 
+         DISABLE LINKS IN SMALL SCREENS
+----------------------------------------------------- */
+@media (max-width: 768px) {
+    .links, ul li {
+        display: none;
+    }
+    
+    nav div {
+        width: calc(80% / 2);
+    }
+
+}
+
+.main {
+    height: calc(100% - 10vh);
+}
+
+.char {
+    align-self: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.text-logo img{
+    max-width: 100%;
+}
+
+.text-logo {
+    flex-direction: column;
+    justify-content: center;
+    color: #FFF;
+}
+
+/* -----------------------------------------------------
+Mutual styles for both img inside text-logo & .content
+----------------------------------------------------- */
+.text-logo .content {
+    align-items: center;
+}
+
+.text-logo img, .text-logo .content {
+    transform: translateY(-10%);
+}
+
+/* -----------------------------------------------------
+End Mutual styles for both img inside text-logo & .content
+----------------------------------------------------- */
+
+.text-logo p {
+    max-width: 383px;
+    line-height: 1.6;
+    margin: 6px 28px;
+    font-size: 19px;
+}
+
+.main .content img {
+    max-width: 50px;
+    margin-left: 8%;
+    transform: translateY(5px);
+    /* translate here to compatible with animation */
+    -webkit-animation: logo-up-and-down 1s linear infinite alternate;
+    -moz-animation: logo-up-and-down 1s linear infinite alternate;
+    -o-animation: logo-up-and-down 1s linear infinite alternate;
+    animation: logo-up-and-down 1s linear infinite alternate;
+}
+
+
+@media (max-width: 1200px) {
+    .main .char {
+        display: none;
+    }
+
+    .text-logo {
+        transform: translateY(0);
+        align-items: center;
+    }
+
+    .text-logo img[alt="squid-game"] {
+        max-width: 80%;
+    }
+
+    .text-logo .content {
+        width: 80%;
+        justify-content: center;
+    }
+
+    .text-logo .content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .text-logo .content p {
+        font-size: .8rem;
+        margin: 6px 14px;
+    }
+
+    .content img {
+        width: 30px;
+    }
+}
+
+@keyframes logo-up-and-down {
+    to {
+        transform: translateY(-15px);
+    }
+}
+
+/* -----------------------------------------------------
+                Start <About Section>
+----------------------------------------------------- */
+
+#about .container {
+    display: grid;
+    grid-template-columns: 60% 30%;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.colorful-img {
+    max-width: 290px;
+}
+
+
+.colorful-img img {
+    width: 100%;
+    border-radius: 30px;
+}
+@media (min-width: 1400px) {
+    
+.colorful-img::after {
+    content: "";
+    width: 250px;
+    height: 90%;
+    border: 10px solid var(--pinkyColor);
+    /* border-width: 1px; */
+    /* border-style: dashed; */
+    /* border-color: var(--pinkyColor); */
+    position: absolute;
+    top: 43px;
+    right: 64px;
+    z-index: -1;
+    transition: .8s;
+    border-radius: 50px 30px;
+
+    }
+
+    .colorful-img:hover::after {
+        top: 30px;
+        right: 100px;
+        border-color: #fff;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .colorful-img {    
+        display: none;
+    }
+
+    #about .container {
+        display: block;
+    }
+}
+
+
+
+
+/* -----------------------------------------------------
+                End <About Section>
+----------------------------------------------------- */
+
+
+/* -----------------------------------------------------
+                START <Trailer Section>
+----------------------------------------------------- */
+#trailer {
+    background-color: #0e0d0d;
+}
+#trailer .container {
+    position: relative;
+}
+.video {
+    width: 100%;
+    margin: 20px auto;
+    /* box-shadow: 0 0 17px -4px var(--pinkyColor); */
+}
+
+.video iframe {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+    /* box-shadow: 0 0 17px -4px var(--pinkyColor); */
+}
+/* 
+#trailer .video::after, #trailer .video::before {
+    content: '';
+    height: 70%;
+    width: 2px;
+    background-color: var(--pinkyColor);
+    position: absolute;
+    right: -50px;
+    top: 15%;
+    border-radius: 20px;
+}
+
+#trailer .video::before {
+    left: -50px;
+}
+
+
+@media (max-width: 768px) {
+    #trailer .video::after, #trailer .video::before {
+        display: none;   
+    }
+
+    #trailer iframe {
+        height: 400px;
+    }
+} */
+
+
+/* -----------------------------------------------------
+                Start <Games Section>
+----------------------------------------------------- */
+
+#games {
+    background-color: var(--pinkyColor);
+}
+
+#games .container {
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    min-height: 400px;
+    width: 300px;
+    background-color: rgb(64 56 56);
+    border-radius: 16px;
+    margin: 15px;
+    /* -webkit-backdrop-filter: blur(12px); */
+    /* backdrop-filter: blur(12px); */
+    box-shadow: 0 0 10px 0px #561c33;
+}
+.card .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card span {
+    position: absolute;
+    right: 0;
+    padding: 5px 16px;
+    background-color: var(--pinkyColor);
+    font-weight: 700;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card img {
+    width: 55%;
+    margin-top: 20px;
+}
+
+
+.card h3 {
+    background-color: var(--pinkyColor);
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 3px;
+    font-size: 1.6rem;
+}
+
+
+
+
+/* -----------------------------------------------------
+                End   <Games Section>
+----------------------------------------------------- */
+/* -----------------------------------------------------
+                    Start <Footer>
+----------------------------------------------------- */
+
+
+footer {
+    background-color: #1b1b1b;
+    height: 500px;
+}
+
+/* -----------------------------------------------------
+                    End <Footer>
+----------------------------------------------------- */

@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="squid gmae, green light, red light">
+    <meta name="description" content="A static page about squid game">
+<!--
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    we can use meta with (name, content) to improve SEO by description or Keywords
+-->
+    <meta name="author" content="Refaey">
+<!--
+    <meta http-equiv="refresh" content="30">
+    Make your document refresh every 30 sec
+-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--
+    <link rel="shortcut ">
+    The shortcut link type is often seen before icon, but this link type is non-conforming, ignored and web authors must not use it anymore.
+-->
+    <title>Squid game</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<!--  oncontextmenu="return false" >> used when we want to disable right click on the document and won't appear a menu -->
+<body oncontextmenu="return false">
+    <header>
+        <nav>
+            <!-- Shapes Logo -->
+            <div class="logo">
+                <img src="imgs/header/logo.png" onmouseover="this.src='imgs/header/logo2.png';"onmouseout="this.src='imgs/header/logo.png'" alt="logo">
+            </div>
+            <!-- onmouseover and onmouseout = hover without transition -->
+            <div class="links">
+                <div class="burger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#trailer">trailer</a></li>
+                    <li><a href="#games">games</a></li>
+                    <li><a href="#players">players</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <!-- <input type="text" placeholder="Search Anything" name="search"> -->
+                <a href="form.html" target="_blank">join &quest;</a>
+            </div>
+        <!--END OF NAVBAR -->
+        </nav>
+        <!-- MAIN SECTION -->
+        <!-- Start Header Section -->
+        <div class="main">
+            <!-- Squid game logo -->
+            <div class="text-logo">
+                <img src="imgs/header/textlogo.png" alt="squid-game">
+                <!-- Paragraph div -->
+                <div class="content">
+                    <img src="imgs/header/vertical_logo.png" alt="logo">
+                    <p>once you start the game, there is no turning back. the winner is alone, the loser only faces death.</p>
+                </div>
+            </div>
+            <div class="char">
+                <img src="imgs/header/character.png" alt="pink-guy">
+            </div>
+        </div>
+    </header>
+    <!-- End Header Section -->
+    <!-- Start About Section -->
+    <section id="about">
+        <h2>about</h2>
+        <div class="container">
+            <p>
+            Squid Game is the Korean drama was released on September 17 and hit No. 1 on the Netflix Top 10 list in the U.S. and many other countries. The show has held that spot ever since.<br><br>
+            The show is a grim, violent survival thriller that is part Hunger Games, part Battle Royale. A mysterious game recruits 456 people to risk their lives for a ₩45.6 billion prize (or $38.7 million in U.S. dollars).
+            </p>
+            <div class="colorful-img">
+                <img src="imgs/about/game.jpg" alt="game">
+            </div>
+        </div>
+    </section>
+    <!-- End About Section -->
+    <!-- Start Trailer Section -->
+    <section id="trailer">
+        <h2>trailer</h2>
+        <div class="container">
+            <!-- <video controls preload="auto">
+                <source src="imgs/trailer.mp4" type="video/mp4">
+                <p>Your browser doesn't support HTML5 video. Here is a <a href="https://web.facebook.com/TEDxAssuitUniversity/videos/squid-game/405006791115608/">link to the video</a> instead.</p>
+            </video> -->
+            <div class="video">
+                <iframe width="1120" height="630" src="https://www.youtube-nocookie.com/embed/oqxAJKy0ii4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    <!-- End Trailer Section -->
+    <!-- Start Games Section -->
+    <section id="games">
+        <div class="container">
+            <div class="card one">
+                <span>Nō1</span>
+                <div class="content">
+                    <img src="imgs/header/textlogo.png" alt="squid-game-logo">
+                    <img src="imgs/games/doll.png" alt="red-light-green-light-doll">
+                </div>
+                <h3>sugar honeycombs</h3>
+            </div>
+            <div class="card second">
+                <span>Nō2</span>
+                <div class="content">
+                    <img src="imgs/header/textlogo.png" alt="squid-game-logo">
+                    <img src="imgs/games/suger-honeycombs.png" alt="suger-honeycombs">
+                </div>
+                <h3>sugar honeycombs !</h3>
+            </div>
+            <div class="card third">
+                <span>Nō3</span>
+                <div class="content">
+                    <img src="imgs/header/textlogo.png" alt="squid-game-logo">
+                    <img src="imgs/games/suger-honeycombs.png" alt="suger-honeycombs">
+                </div>
+                <h3>sugar honeycombs</h3>
+            </div>
+        </div>
+    </section>
+    <!-- End Games Section -->
+    <!-- Start Footer -->
+    <footer>
+        <form id="contact" action="">
+            <input type="submit" value="Send">
+        </form>
+    </footer>
+    <!-- End Footer -->
+</body>
+</html>
